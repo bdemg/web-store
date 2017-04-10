@@ -36,26 +36,26 @@ function validateRegistration(){
 
 function isEmailValid(campo){
 		
-		regex = /[\w.]+@[a-z]+\.[a-z.]+/;
-		isValidEmail = regex.test(campo.value);
-		
-		if(!isValidEmail){
-		
-			alert("El email debe escribirse con un formato valido");
-			campo.focus();
-		}
-		
-		return isValidEmail;
+	regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	isValidEmail = regex.test(campo.value);
+	
+	if(!isValidEmail){
+	
+		alert("El email debe escribirse con un formato valido");
+		campo.focus();
+	}
+	
+	return isValidEmail;
 }
 
 function passwordsMatch(campoUno, campoDos){
 		
-		if(campoUno.value!=campoDos.value){
-			alert("Tienen que estar iguales las contraseñas");
-			campoUno.value = "";
-			campoDos.value = "";
-			campoUno.focus
-			return false;
-		}
-		return true;
+	if(campoUno.value!=campoDos.value){
+		alert("Tienen que estar iguales las contraseñas");
+		campoUno.value = "";
+		campoDos.value = "";
+		campoUno.focus
+		return false;
 	}
+	return true;
+}
