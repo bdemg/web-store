@@ -3,6 +3,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
+@charset "UTF-8";
 /* 
     Created on : 10/04/2017, 04:30:06 PM
     Author     : Evan-Ian-Ray
@@ -16,11 +17,32 @@ html {
 
 body {
   margin: 0; //remueve el margen en todas los Web Browsers
+  padding: 0;
+  line-height: 1.75;
+  background: #fcfcfc;
+  color: #101010;
+  font-weight: normal;
+  font-family: sans-serif, Arial, Helvetica;
 }
+
+a{
+    text-decoration: none;
+    background-color: transparent;
+    color: lightsteelblue;
+}
+
+a:active, a:hover{
+    outline-width: 0;
+}
+
+table{
+    font-size: 12px;
+    }
 
 button, input {
     font-family: sans-serif;
     line-height: 1.5;
     font-size: 100%;
     margin: 0;
+    overflow: auto;
 }
