@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/04/2017, 04:30:06 PM
+    Author     : Evan-Ian-Ray
+*/
+html {
+    font-family: sans-serif;
+    line-height: 1.5;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0; //remueve el margen en todas los Web Browsers
+}
+
+button, input {
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 100%;
+    margin: 0;
+}
