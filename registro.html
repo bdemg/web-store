@@ -13,8 +13,14 @@
 		<script>
 		<!--
 		window.onload = function () {
+		
+			document.forma.btn_cancelar.onclick = function(){
 			
-			document.forma.boton.onclick = function(){
+				//history.back();
+				window.location = "index.html";
+			}
+			
+			document.forma.btn_registrar.onclick = function(){
 				
 				if(validateRegistration()){
 					window.location = "index.html";
@@ -51,7 +57,8 @@
 					<td><input type="password" name="conf_contrasena" size="20"></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="right"><input type="button" name="boton" value="Registrar"></td>
+					<td><input type="button" name="btn_cancelar" value="Cancelar"></td>
+					<td align="right"><input type="button" name="btn_registrar" value="Registrar"></td>
 				</tr>
 			</table>
 		</form>
