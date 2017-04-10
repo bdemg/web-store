@@ -1,13 +1,13 @@
 function validateRegistration(){
 	
-	if(document.forma.email.value == ""){
+	if(document.forma.correo.value == ""){
 		
-		alert("El campo de email está vacío, favor de llenarlo");
-		document.forma.email.focus();
+		alert("El campo de correo está vacío, favor de llenarlo");
+		document.forma.correo.focus();
 		return false;
 	}
 	
-	if(isEmailValid(document.forma.email)){
+	if(!isEmailValid(document.forma.correo)){
 		
 		return false;
 	}
@@ -26,7 +26,7 @@ function validateRegistration(){
 		return false;
 	}
 	
-	if(passwordsMatch(document.forma.contrasena, document.forma.contrasena2)){
+	if(!passwordsMatch(document.forma.contrasena, document.forma.conf_contrasena)){
 		
 		return false;
 	}
@@ -41,7 +41,7 @@ function isEmailValid(campo){
 	
 	if(!isValidEmail){
 	
-		alert("El email debe escribirse con un formato valido");
+		alert("El correo debe escribirse con un formato valido \n(por ejemplo: pan@ejemplo.com)");
 		campo.focus();
 	}
 	
