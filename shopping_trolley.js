@@ -26,7 +26,7 @@ function displayShoppingTrolley(item_number){
 	
 	if (item_number.length < 1){
 		
-		totals.innerHTML = "<h4>No hay elementos en el carrito. Agrega algunos utilizando el enlace</h4>";
+		totals.innerHTML = "<h4>No hay elementos en el carrito. Agrega algunos utilizando <a href=\"catalogo.html\">el cat&aacute;logo</h4>";
 		
 	}else{
 		
