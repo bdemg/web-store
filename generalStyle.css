@@ -8,6 +8,10 @@ and open the template in the editor.
     Created on : 10/04/2017, 04:30:06 PM
     Author     : Evan-Ian-Ray
 */
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: sans-serif;
     line-height: 1.5;
@@ -16,10 +20,14 @@ html {
 }
 
 body {
-  margin: 0; //remueve el margen en todas los Web Browsers
+    word-wrap: break-word;
+}
+
+body {
+  margin: 0; /*remueve el margen en todas los Web Browsers*/
   padding: 0;
   line-height: 1.75;
-  background: #fcfcfc;
+  background: #fffbee;
   color: #101010;
   font-weight: normal;
   font-family: sans-serif, Arial, Helvetica;
@@ -35,14 +43,116 @@ a:active, a:hover{
     outline-width: 0;
 }
 
-table{
-    font-size: 12px;
-    }
+h1, h2, h3, h4, h5, h6{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+form {
+    margin: 0px;
+}
+label {
+    font-weight: bold;
+}
 
 button, input {
     font-family: sans-serif;
     line-height: 1.5;
     font-size: 100%;
     margin: 0;
-    overflow: auto;
+    overflow: visible;
+}
+
+.btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid #d1d5da;
+    box-shadow: 0px 1px 1px 0px #d2c8af;
+}
+
+.btn-primary{
+    color: #2d2d2d;
+    background-color: #edd289;
+}
+.a-centered-box {
+    margin: 0 auto;
+    width: 340px;
+    padding: 14px;
+}
+
+.form-header {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #2d2d2d;
+    text-align: center;
+}
+
+.form-header h1 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.form-body {
+    padding: 20px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #d1d4da;
+    border-radius: 3px;
+}
+
+.form-body label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-body .input-block{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.form-body .btn{
+    margin-top: 20px;
+}
+
+.form-format {
+    padding: 6px 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2d2d2d;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px 0px #464647 inset;
+    outline: none;
+}
+
+.input-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.registration-box {
+    padding: 15px 20px;
+    text-align: center;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+}
+
+.mt-medium {
+    margin-top: 15px;
 }
