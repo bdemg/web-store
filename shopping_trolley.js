@@ -21,10 +21,12 @@ var FIXED_SHIPPING_COST = 20.00
 function displayShoppingTrolley(item_number){
 	
 	var shoppingTrolley = document.getElementById("shopping_trolley");
+	var totals = document.getElementById("shopping_totals");
+	var buttons = document.getElementById("buttons");
 	
 	if (item_number.length < 1){
 		
-		shoppingTrolley.innerHTML = "<h4>No hay elementos en el carrito. Agrega algunos utilizando el enlace</h4>";
+		totals.innerHTML = "<h4>No hay elementos en el carrito. Agrega algunos utilizando el enlace</h4>";
 		
 	}else{
 		
@@ -46,7 +48,38 @@ function displayShoppingTrolley(item_number){
 			total = total + item_price[item_number[i].id] * item_number[i].quantity;
 		}
 		
-		shoppingTrolley.innerHTML = shoppingTrolley.innerHTML + "<br><br> <p>Precio de envío: $20 </p>";
-		shoppingTrolley.innerHTML = shoppingTrolley.innerHTML + "<p>Total - $" + (total + FIXED_SHIPPING_COST) + "</p>";
+		
+		totals.innerHTML = totals.innerHTML + "<p>Precio de envío: $20 </p>";
+		totals.innerHTML = totals.innerHTML + "<p>Total - $" + (total + FIXED_SHIPPING_COST) + "</p>";
+		
+		buttons.innerHTML = "<p><input type=\"button\" name=\"comprar\" value=\"Comprar\"> &nbsp; <input type=\"button\" name=\"eliminar_seleccionados\" value=\"Eliminar Seleccionados\"> &nbsp; <input type=\"button\" name=\"eliminar_todo\" value=\"Vaciar Carrito\"> </p>"
 	}
+}
+
+function vaciarCarrito(){
+	bake_cookie("shopping_trolley", new Array());
+	window.location = "carrito.html";
+}
+
+function remove(){
+	var new_cookie_raw_data = new Array();
+	
+	if (document.orderform.orderboxes.length){
+	
+		for (i = 0; i < document.orderform.orderboxes.length; i++){
+		
+			if (document.orderform.orderboxes[i].checked == false){
+				new_cookie_raw_data.push(JSON.parse(document.orderform.orderboxes[i].value));
+			}
+		}
+	} else{
+		if(document.orderform.orderboxes.checked == false){
+		
+			new_cookie_raw_data.push(JSON.parse(document.orderform.orderboxes[i].value));
+		}
+	}
+		
+	bake_cookie("shopping_trolley", new_cookie_raw_data);
+
+	window.location = "carrito.html";
 }
