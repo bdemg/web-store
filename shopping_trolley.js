@@ -56,6 +56,11 @@ function displayShoppingTrolley(item_number){
 	}
 }
 
+function comprarCarrito(){
+	bake_cookie("shopping_trolley", new Array());
+	window.location = "catalogo.html";
+}
+
 function vaciarCarrito(){
 	bake_cookie("shopping_trolley", new Array());
 	window.location = "carrito.html";

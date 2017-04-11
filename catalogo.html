@@ -21,6 +21,11 @@
 			window.location = "index.html";
 		}
 		
+		document.forma.btn_carrito.onclick = function(){
+		
+			window.location = "carrito.html";
+		}
+		
 		document.forma.btn_anadir[0].onclick = function(){
 			
 			if(validateQuantity(document.forma.cantidad[0])){
@@ -83,6 +88,8 @@
 		<h1>Cat&aacute;logo</h1>
 		
 		<form name="forma">
+		
+			<input type="button" name="btn_carrito" value="Carrito">
 		
 			<table align="center">
 			
