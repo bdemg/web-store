@@ -49,3 +49,16 @@ function addNewItem(shopping_trolley, quantity, productId){
 	shopping_trolley.push( { "id" : productId, "quantity" : quantity } );
 	bake_cookie("shopping_trolley", shopping_trolley);
 }
+
+function updateTrolleyItemCount(){
+	
+	var itemCount = read_cookie("shopping_trolley").length;
+	
+	if(itemCount){
+		
+		document.forma.btn_carrito.value="Carrito (" + itemCount + ")";
+	}else{
+		
+		document.forma.btn_carrito.value="Carrito (0)";
+	}
+}

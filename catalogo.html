@@ -32,6 +32,7 @@
 				
 				placeOrder(Number(document.forma.id_pan[0].value), Number(document.forma.cantidad[0].value));
 				document.forma.cantidad[0].value = "";
+				updateTrolleyItemCount();
 			}
 		}
 		
@@ -41,6 +42,7 @@
 				
 				placeOrder(Number(document.forma.id_pan[1].value), Number(document.forma.cantidad[1].value));
 				document.forma.cantidad[1].value = "";
+				updateTrolleyItemCount();
 			}
 		}
 		
@@ -50,6 +52,7 @@
 				
 				placeOrder(Number(document.forma.id_pan[2].value), Number(document.forma.cantidad[2].value));
 				document.forma.cantidad[2].value = "";
+				updateTrolleyItemCount();
 			}
 		}
 		
@@ -59,8 +62,11 @@
 				
 				placeOrder(Number(document.forma.id_pan[3].value), Number(document.forma.cantidad[3].value));
 				document.forma.cantidad[3].value = "";
+				updateTrolleyItemCount();
 			}
 		}
+		
+		updateTrolleyItemCount();
 	}
 
 	function validateQuantity(field){
@@ -89,7 +95,7 @@
 		
 		<form name="forma">
 		
-			<input type="button" name="btn_carrito" value="Carrito">
+			<input type="button" name="btn_carrito" value="Carrito (0)">
 		
 			<table align="center">
 			
