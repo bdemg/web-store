@@ -30,27 +30,27 @@
 	</head>
 	
 	<body>
-            
             <div class="a-centered-box">
-                <div class="form-header">
-                    <h1>Iniciar sesi&oacute;n</h1>
-                </div>
-		<form action="" method="get" name="forma">
-			<table>
-				<tr>
-					<td>Usuario: </td>
-					<td><input type="text" class="form-format" name="usuario" size="20"></td>
-				</tr>
-				<tr>
-					<td>Contrase&ntilde;a: </td>
-					<td><input type="password" class="form-format" name="contrasena" size="20"></td>
-				</tr>
-				<tr>
-					<td><a href="registro.html">Reg&iacute;strate</a> </td>
-					<td align="right"><input type="button" name="boton" value="Iniciar"></td>
-				</tr>
-			</table>
-		</form>
+                <form action="" method="get" name="forma">
+                    <div class="form-header">
+                        <h1>Iniciar sesi&oacute;n</h1>
+                    </div>
+                        <div class="form-body">
+                                        <label>Usuario: </label>
+                                        <input type="text" class="form-format input-block" name="usuario" size="20">
+
+                                        <label>Contrase&ntilde;a: </label>
+                                        <input type="password" class="form-format input-block" name="contrasena" size="20">
+
+                                        <input type="button" class="btn btn-primary btn-block" name="boton" value="Entrar">
+                        </div>
+                </form>
+                
+                <p class="registration-box mt-medium">
+                    ¿Nuevo aqu&iacute;? 
+                    <a href="registro.html">Reg&iacute;strate</a>
+                    .
+                </p>
             </div>
             
 	</body>
