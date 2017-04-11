@@ -81,9 +81,15 @@ button, input {
     color: #2d2d2d;
     background-color: #edd289;
 }
-.a-centered-box {
-    margin: 0 auto;
+.a-box-medium {
+    margin: 0px auto;
     width: 340px;
+    padding: 14px;
+}
+
+.a-box-large {
+    margin: 0px auto;
+    width: 700px;
     padding: 14px;
 }
 
