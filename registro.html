@@ -31,27 +31,60 @@
 	
 	<body>
             <div class="a-box-large">
-		<form action="" method="get" name="forma">
-                    <div class="form-header">
+                    <div class="registry-header">
                         <h1>Registrar usuario</h1>
                     </div>
-                    <div class="form-body">
-                                <label>Correo electr&oacute;nico:</label>
-                                <input type="text" class="form-format input-block" name="correo" size="20">
-
-                                <label>Usuario:</label>
-                                <input type="text" class="form-format input-block" name="usuario" size="20">
-
-                                <label>Contrase&ntilde;a:</label>
-                                <input type="password" class="form-format input-block" name="contrasena" size="20">
-
-                                <label>Confirmar contrase&ntilde;a:</label>
-                                <input type="password" class="form-format input-block" name="conf_contrasena" size="20">
-                                
-                                <input type="button" class="btn" name="btn_registrar" value="Crear una cuenta">
-                                <input type="button" class="btn" name="btn_cancelar" value="Cancelar">
-                    </div>
+		<form action="" method="get" name="forma" class="registry-body" >
+                    <dl class="registry-group">
+                        <dt>
+                            <label>Correo electr&oacute;nico:</label>
+                        </dt>
+                        <dd>
+                            <input type="text" class="form-format input-block" name="correo" size="20">
+                            <p class="note">Prometemos nunca difundir tu direcci&oacute;n de 
+                                correo y solo notificarte de asuntos relacionados 
+                                con tu cuenta</p>
+                        </dd>
+                    </dl>
+                    <dl class="registry-group">
+                        <dt>
+                            <label>Usuario:</label>
+                        </dt>
+                        <dd>
+                            <input type="text" class="form-format input-block" name="usuario" size="20">
+                            <p class="note">Este ser&aacute; el nombre sobre el que llegar&aacute;n tus pedidos</p>
+                        </dd>
+                    </dl>
+                    <dl class="registry-group">
+                        <dt>
+                            <label>Contrase&ntilde;a:</label>
+                        </dt>
+                        <dd>
+                            <input type="password" class="form-format input-block" name="contrasena" size="20">
+                            <p class="note">Una vez que se defina el RegEx de la contrase&ntilde;a; especificarlo aqu&iacute;</p>
+                        </dd>
+                    </dl>
+                    <dl class="registry-group">
+                        <dt>
+                            <label>Confirmar contrase&ntilde;a:</label>
+                        </dt>
+                        <dd>
+                        <input type="password" class="form-format input-block" name="conf_contrasena" size="20">
+                        </dd>
+                    </dl>
+                        <input type="button" class="btn btn-primary" name="btn_registrar" value="Crear una cuenta">
+                        <input type="button" class="btn" name="btn_cancelar" value="Cancelar">
 		</form>
+                <div class="registry-secondary">
+                    <div class="info-box">
+                        <h2>Amar&aacute;s esta panader&iacute;a</h2>
+                        <ul class="list-of-features">
+                            <li>Gran variedad de productos.</li>
+                            <li>Pan recien hecho.</li>
+                            <li>Donas, barras y conchas.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 	</body>
 

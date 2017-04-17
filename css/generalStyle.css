@@ -60,6 +60,10 @@ label {
     font-weight: 500;
 }
 
+dd {
+    margin-left: 0px;
+}
+
 button, input {
     font-family: sans-serif;
     line-height: 1.5;
@@ -77,7 +81,7 @@ button, input {
     box-shadow: 0px 1px 1px 0px #d2c8af;
 }
 
-.btn-primary{
+.btn-primary {
     color: #2d2d2d;
     background-color: #edd289;
 }
@@ -89,8 +93,8 @@ button, input {
 
 .a-box-large {
     margin: 0px auto;
-    width: 700px;
-    padding: 14px;
+    width: 750px;
+    padding-top: 14px;
 }
 
 .form-header {
@@ -141,6 +145,77 @@ button, input {
     outline: none;
 }
 
+.registry-body {
+    float: left;
+    width: 450px;
+}
+
+.registry-body .btn {
+    margin-top: 20px;
+}
+
+.registry-body .btn+.btn {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.registry-header {
+    overflow: hidden;
+    text-align: left;
+}
+
+.registry-header h1 {
+    font-size: 45px;
+    font-weight: normal;
+    letter-spacing: -1px;
+}
+
+.registry-group {
+    margin: 16px 0px;
+}
+
+.registry-group dt {
+    margin: 0px 0px 8px 0px;
+}
+
+.registry-group label {
+    font-size: 14px;
+    line-height: 1.5;
+    position: static;
+}
+
+.registry-group .form-format {
+    margin-right: 5px;
+    background-color: #fafbfc;
+}
+
+.registry-secondary {
+    float: right;
+    width: 250px;
+}
+
+.info-box {
+    background-color: #fafbfc;
+    border: 1px solid #ccc3bb;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px bisque;
+}
+
+.info-box h2 {
+    margin-bottom: 15px;
+    padding: 15px;
+    overflow: hidden;
+    font-size: 16px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.list-of-features {
+    padding: 0px 15px 15px;
+    margin: 0px;
+    font-size: 14px;
+    list-style: none;
+}
+
 .input-block {
     display: block;
     width: 100%;
@@ -152,7 +227,7 @@ button, input {
     text-align: center;
 }
 
-.registration-box {
+.registration-link-box {
     padding: 15px 20px;
     text-align: center;
     border: 1px solid #d1d5da;
@@ -161,4 +236,10 @@ button, input {
 
 .mt-medium {
     margin-top: 15px;
+}
+
+.note {
+    margin: 4px 0px 2px;
+    font-size: 12px;
+    color: grey;
 }
