@@ -1,3 +1,31 @@
+<?php
+
+$cadena = getIfSet($_REQUEST["estado"]);
+
+if($cadena!=null){
+	switch ($_REQUEST["estado"]) {
+		case 1:
+			$cadena = "Debe proporcionar tu nombre de usuario.";
+			break;
+		case 2:
+			$cadena = "Debe proporcionar su contrase&ntilde;a.";
+			break;
+		case 3:
+			$cadena = "El nombre de usuario o la contrase&ntilde;a son incorrectos.";
+			break;
+		case 4:
+			$cadena = "Debes iniciar sesi&oacute;n para utilizar el sistema.";
+			break;
+		default:
+			$cadena = "";
+	}
+}
+
+function getIfSet(&$value, $default = null){
+    return isset($value) ? $value : $default;
+}
+?>
+
 <html>
 
 	<head>
@@ -9,11 +37,9 @@
 		<!--
 		window.onload = function () {
 			
-			document.forma.boton.onclick = function(){
+			document.forma.onsubmit = function(){
 				
-				if(validateLogin()){
-					window.location = "catalogo.html";
-				}
+				return validateLogin();
 			}
 		}
 		
@@ -25,7 +51,7 @@
 	
 	<body>
             <div class="a-box-medium">
-                <form action="" method="get" name="forma">
+                <form action="validar.php" method="post" name="forma">
                     <div class="form-header">
                         <h1>Iniciar sesi&oacute;n</h1>
                     </div>
@@ -36,7 +62,7 @@
                                         <label>Contrase&ntilde;a: </label>
                                         <input type="password" class="form-format input-block" name="contrasena" size="20">
 
-                                        <input type="button" class="btn btn-primary btn-block" name="boton" value="Acceder">
+                                        <input type="submit" class="btn btn-primary btn-block" name="boton" value="Acceder">
                         </div>
                 </form>
                 
@@ -46,6 +72,10 @@
                     .
                 </p>
             </div>
+			
+			<?php 
+			echo "<p>" . $cadena . "</p>";
+			?>
             
 	</body>
 
