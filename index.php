@@ -16,6 +16,9 @@ if($cadena!=null){
 		case 4:
 			$cadena = "Debes iniciar sesi&oacute;n para utilizar el sistema.";
 			break;
+		case 5:
+			$cadena = "Sesi&oacute;n cerrada con &eacute;xito.";
+			break;
 		default:
 			$cadena = "";
 	}

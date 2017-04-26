@@ -22,11 +22,6 @@ if ($_SESSION["valido"] != true) {
 		<!--
 		window.onload = function () {
 		
-		document.forma.btn_cancelar.onclick = function(){
-		
-			window.location = "index.php";
-		}
-		
 		document.forma.btn_carrito.onclick = function(){
 		
 			window.location = "carrito.php";
@@ -101,7 +96,8 @@ if ($_SESSION["valido"] != true) {
 		
 		<form name="forma">
 		
-			<input type="button" name="btn_carrito" value="Carrito (0)">
+			<input type="button" name="btn_carrito" value="Carrito (0)"> <br/>
+			<a href="cerrarSesion.php">Cerrar sesi&oacute;n</a>
 		
 			<table align="center">
 			
@@ -201,8 +197,6 @@ if ($_SESSION["valido"] != true) {
 				</tr>
 			
 			</table>
-			
-			<input type="button" name="btn_cancelar" value="Cancelar">
 		
 		</form>
 	
