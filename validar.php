@@ -31,7 +31,7 @@ if (mysqli_num_rows($resultado) > 0) {
 	$_SESSION["valido"] = true;	
 	$_SESSION["nombre"] = $_REQUEST["usuario"];	
 	
-	header("location: catalogo.html");
+	header("location: catalogo.php");
 	
 } else {
 	//Sino redirigir a la página index.html 

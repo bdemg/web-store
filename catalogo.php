@@ -29,7 +29,7 @@ if ($_SESSION["valido"] != true) {
 		
 		document.forma.btn_carrito.onclick = function(){
 		
-			window.location = "carrito.html";
+			window.location = "carrito.php";
 		}
 		
 		document.forma.btn_anadir[0].onclick = function(){
