@@ -70,7 +70,7 @@ function getIfSet(&$value, $default = null){
                 </form>
                 
                 <p class="registration-link-box mt-medium">
-                    ¿Nuevo aqu&iacute;? 
+                    &iquest;Nuevo aqu&iacute;? 
                     <a href="registro.html">Reg&iacute;strate</a>
                     .
                 </p>

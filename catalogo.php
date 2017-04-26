@@ -200,6 +200,8 @@ if ($_SESSION["valido"] != true) {
 		
 		</form>
 	
+	<p>&iquest;Tienes preguntas, sugerencias o comentarios? Escr&iacute;benos un <a href="mailto:algo@gmail.com;mdoming@uady.mx">correo</a></p>
+	
 	</body>
 
 </html>
