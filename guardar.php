@@ -1,13 +1,5 @@
 <?php
 
-/* 
-session_start();
-if ($_SESSION["valido"] != true) {
-	 header("location: index.php?estado=4");
-	 exit();
-}	
-*/ 
-
 include("variables.php");
 
 include("funciones.php");

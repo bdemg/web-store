@@ -26,11 +26,12 @@ $resultado = mysqli_query($conexion, $sql);
 mysqli_close($conexion);
 
 if (mysqli_num_rows($resultado) > 0) {
-	//Si hay registro reenviar a la página menu.php
-	header("location: catalogo.html");
 	
-	//session_start();
-	//$_SESSION["valido"] = true;	
+	session_start();
+	$_SESSION["valido"] = true;	
+	$_SESSION["nombre"] = $_REQUEST["usuario"];	
+	
+	header("location: catalogo.html");
 	
 } else {
 	//Sino redirigir a la página index.html 

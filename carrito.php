@@ -1,3 +1,13 @@
+<?php
+// * * * * 
+session_start();
+if ($_SESSION["valido"] != true) {
+	 header("location: index.php?estado=4");
+	 exit();
+}	
+// * * * * 
+?>
+
 <html>
 	<head>
 	<title>Carrito</title>
