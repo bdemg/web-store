@@ -1,7 +1,7 @@
 function placeOrder(productId, quantity){
 	
 	//if the cookie exists
-	if (document.cookie && document.cookie != ""){
+	if (document.cookie && document.cookie != "" && read_cookie("shopping_trolley")){
 	
 		var shopping_trolley = read_cookie("shopping_trolley");
 		

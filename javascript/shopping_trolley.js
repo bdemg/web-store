@@ -49,10 +49,10 @@ function displayShoppingTrolley(item_number){
 		}
 		
 		
-		totals.innerHTML = totals.innerHTML + "<p>Precio de envío: $20 </p>";
+		totals.innerHTML = totals.innerHTML + "<p>Precio de env&iacute;o: $20 </p>";
 		totals.innerHTML = totals.innerHTML + "<p>Total - $" + (total + FIXED_SHIPPING_COST) + "</p>";
 		
-		buttons.innerHTML = "<p><input type=\"button\" name=\"comprar\" value=\"Comprar\"> &nbsp; <input type=\"button\" name=\"eliminar_seleccionados\" value=\"Eliminar Seleccionados\"> &nbsp; <input type=\"button\" name=\"eliminar_todo\" value=\"Vaciar Carrito\"> </p>"
+		buttons.innerHTML = "<p><input type=\"submit\" name=\"comprar\" value=\"Comprar\"> &nbsp; <input type=\"button\" name=\"eliminar_seleccionados\" value=\"Eliminar Seleccionados\"> &nbsp; <input type=\"button\" name=\"eliminar_todo\" value=\"Vaciar Carrito\"> </p>"
 	}
 }
 

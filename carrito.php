@@ -21,7 +21,7 @@ if ($_SESSION["valido"] != true) {
 				
 				displayShoppingTrolley(read_cookie("shopping_trolley"));
 				
-				document.orderform.comprar.onclick = comprarCarrito;
+				//document.orderform.onsubmit = comprarCarrito;
 				document.orderform.eliminar_todo.onclick = vaciarCarrito;
 				document.orderform.eliminar_seleccionados.onclick = remove;
 			}
@@ -33,7 +33,7 @@ if ($_SESSION["valido"] != true) {
 	<body>
 		<h1>Carrito</h1>
 
-		<form name="orderform">
+		<form name="orderform" action="registerPurchase.php" method="get">
 			<table id="shopping_trolley">
 				
 			</table>
