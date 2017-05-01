@@ -12,14 +12,12 @@
 			document.forma.btn_cancelar.onclick = function(){
 			
 				//history.back();
-				window.location = "index.html";
+				window.location = "index.php";
 			}
 			
-			document.forma.btn_registrar.onclick = function(){
+			document.forma.onsubmit = function(){
 				
-				if(validateRegistration()){
-					window.location = "index.html";
-				}
+				return validateRegistration();
 			}
 		}
 		
@@ -34,7 +32,7 @@
                     <div class="registry-header">
                         <h1>Registrar usuario</h1>
                     </div>
-		<form action="" method="get" name="forma" class="registry-body" >
+		<form action="guardar.php" method="post" name="forma" class="registry-body" >
                     <dl class="registry-group">
                         <dt>
                             <label>Correo electr&oacute;nico:</label>
@@ -72,7 +70,7 @@
                         <input type="password" class="form-format input-block" name="conf_contrasena" size="20">
                         </dd>
                     </dl>
-                        <input type="button" class="btn btn-primary" name="btn_registrar" value="Crear una cuenta">
+                        <input type="submit" class="btn btn-primary" name="btn_registrar" value="Crear una cuenta">
                         <input type="button" class="btn" name="btn_cancelar" value="Cancelar">
 		</form>
                 <div class="registry-secondary">

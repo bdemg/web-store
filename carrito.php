@@ -1,3 +1,13 @@
+<?php
+// * * * * 
+session_start();
+if ($_SESSION["valido"] != true) {
+	 header("location: index.php?estado=4");
+	 exit();
+}	
+// * * * * 
+?>
+
 <html>
 	<head>
 	<title>Carrito</title>
@@ -31,7 +41,7 @@
 			<span id="buttons"></span>
 		</form>
 		<br>
-	<a href="catalogo.html"> Regresar al Cat&aacute;logo </a>
+	<a href="catalogo.php"> Regresar al Cat&aacute;logo </a>
 	</body>
 
 </html>

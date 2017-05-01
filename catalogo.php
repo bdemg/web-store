@@ -1,3 +1,13 @@
+<?php
+// * * * * 
+session_start();
+if ($_SESSION["valido"] != true) {
+	 header("location: index.php?estado=4");
+	 exit();
+}	
+// * * * * 
+?>
+
 <html>
 
 	<head>
@@ -12,14 +22,9 @@
 		<!--
 		window.onload = function () {
 		
-		document.forma.btn_cancelar.onclick = function(){
-		
-			window.location = "index.html";
-		}
-		
 		document.forma.btn_carrito.onclick = function(){
 		
-			window.location = "carrito.html";
+			window.location = "carrito.php";
 		}
 		
 		document.forma.btn_anadir[0].onclick = function(){
@@ -91,9 +96,10 @@
 		
 		<form name="forma">
 		
-			<input type="button" class="btn" name="btn_carrito" value="Carrito (0)">
-			<input type="button" class="btn" name="btn_cancelar" value="Cancelar">
-		
+
+			<input type="button" class="btn" name="btn_carrito" value="Carrito (0)"> <br/>
+			<a href="cerrarSesion.php">Cerrar sesi&oacute;n</a>
+
 			<table align="center" border="1px">
 			
 				<tr>
@@ -194,6 +200,8 @@
 			</table>
 		
 		</form>
+	
+	<p>&iquest;Tienes preguntas, sugerencias o comentarios? Escr&iacute;benos un <a href="mailto:algo@gmail.com;mdoming@uady.mx">correo</a></p>
 	
 	</body>
 
