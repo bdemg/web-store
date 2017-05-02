@@ -58,12 +58,12 @@ function displayShoppingTrolley(item_number){
 
 function comprarCarrito(){
 	bake_cookie("shopping_trolley", new Array());
-	window.location = "catalogo.html";
+	window.location = "catalogo.php";
 }
 
 function vaciarCarrito(){
 	bake_cookie("shopping_trolley", new Array());
-	window.location = "carrito.html";
+	window.location = "carrito.php";
 }
 
 function remove(){
@@ -86,5 +86,5 @@ function remove(){
 		
 	bake_cookie("shopping_trolley", new_cookie_raw_data);
 
-	window.location = "carrito.html";
+	window.location = "carrito.php";
 }

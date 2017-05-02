@@ -118,7 +118,7 @@ if ($_SESSION["valido"] != true) {
 					<td>Cantidad:</td>
 					<td><input type="text" name="cantidad" size="10"></td>
 					<td><input type="button" class="btn" name="btn_anadir" value="A&ntilde;adir"></td>
-					<td><input type="hidden" name="id_pan" value="0"></td>
+					<td><input type="hidden" name="id_pan" value="1"></td>
 				</tr>
 				
 				<!-- Otro pan, separador -->
@@ -143,7 +143,7 @@ if ($_SESSION["valido"] != true) {
 					<td>Cantidad:</td>
 					<td><input type="text" name="cantidad" size="10"></td>
 					<td><input type="button" class="btn" name="btn_anadir" value="A&ntilde;adir"></td>
-					<td><input type="hidden" name="id_pan" value="1"></td>
+					<td><input type="hidden" name="id_pan" value="2"></td>
 				</tr>
 				
 				<!-- Otro pan, separador -->
@@ -168,7 +168,7 @@ if ($_SESSION["valido"] != true) {
 					<td>Cantidad:</td>
 					<td><input type="text" name="cantidad" size="10"></td>
 					<td><input type="button" class="btn" name="btn_anadir" value="A&ntilde;adir"></td>
-					<td><input type="hidden" name="id_pan" value="2"></td>
+					<td><input type="hidden" name="id_pan" value="3"></td>
 				</tr>
 				
 				<!-- Otro pan, separador -->
@@ -193,7 +193,7 @@ if ($_SESSION["valido"] != true) {
 					<td>Cantidad:</td>
 					<td><input type="text" name="cantidad" size="10"></td>
 					<td><input type="button" class="btn" name="btn_anadir" value="A&ntilde;adir"></td>
-					<td><input type="hidden" name="id_pan" value="3"></td>
+					<td><input type="hidden" name="id_pan" value="4"></td>
 				</tr>
 			
 			</table>
