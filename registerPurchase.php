@@ -23,6 +23,6 @@ if(!isset($_COOKIE["shopping_trolley"])) {
 	
 	unset($_COOKIE["shopping_trolley"]);
 	setcookie("shopping_trolley", null, -1, '/');
-	//header("location: catalogo.php");
+	header("location: catalogo.php");
 }
 ?>
