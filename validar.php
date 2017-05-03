@@ -20,16 +20,18 @@ if (!$conexion) {
 $usuarioF = mysqli_real_escape_string($conexion, $_REQUEST["usuario"]);
 $contrasenaF = mysqli_real_escape_string($conexion, $_REQUEST["contrasena"]);
 
-$sql = "SELECT usuario, contrasena FROM usuarios WHERE usuario ='" . $usuarioF . "' AND contrasena ='" . $contrasenaF . "'";
+$sql = "SELECT * FROM usuarios WHERE usuario ='" . $usuarioF . "' AND contrasena ='" . $contrasenaF . "'";
 
 $resultado = mysqli_query($conexion, $sql);
 mysqli_close($conexion);
 
 if (mysqli_num_rows($resultado) > 0) {
 	
+	for ($registros = array (); $fila = mysqli_fetch_assoc($resultado); $registros[] = $fila);	
+	
 	session_start();
 	$_SESSION["valido"] = true;	
-	$_SESSION["nombre"] = $_REQUEST["usuario"];	
+	$_SESSION["id"] = $registros[0]["id_usuario"];	
 	
 	header("location: catalogo.php");
 	

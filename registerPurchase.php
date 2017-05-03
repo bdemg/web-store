@@ -17,12 +17,12 @@ if(!isset($_COOKIE["shopping_trolley"])) {
 	
 	foreach($orderList as $item){
 		
-		$sentenciaSQL = "INSERT INTO ordenes (item_id, quantity) VALUES ('" . $item->id . "', '" . $item->quantity . "')";
-		//EjecutarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
+		$sentenciaSQL = "INSERT INTO ordenes (product_id, id_usuario, quantity) VALUES (" . $item->id . ", " . $_SESSION["id"] . ", '" . $item->quantity . "')";
+		EjecutarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
 	}
 	
 	unset($_COOKIE["shopping_trolley"]);
 	setcookie("shopping_trolley", null, -1, '/');
-	header("location: catalogo.php");
+	//header("location: catalogo.php");
 }
 ?>
