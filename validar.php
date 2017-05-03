@@ -31,7 +31,8 @@ if (mysqli_num_rows($resultado) > 0) {
 	
 	session_start();
 	$_SESSION["valido"] = true;	
-	$_SESSION["id"] = $registros[0]["id_usuario"];	
+	$_SESSION["id"] = $registros[0]["id_usuario"];
+	$_SESSION["privilegiosAdmin"] = $registros[0]["admin"];
 	
 	header("location: catalogo.php");
 	
