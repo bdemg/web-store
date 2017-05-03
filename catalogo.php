@@ -96,10 +96,11 @@ if ($_SESSION["valido"] != true) {
 		
 		<form name="forma">
 		
-			<input type="button" name="btn_carrito" value="Carrito (0)"> <br/>
+
+			<input type="button" class="btn" name="btn_carrito" value="Carrito (0)"> <br/>
 			<a href="cerrarSesion.php">Cerrar sesi&oacute;n</a>
-		
-			<table align="center">
+
+			<table align="center" border="1px">
 			
 				<tr>
 					<td rowspan="4"><img src="imagenes/bolitas_de_nuez.png" width="150" height="150" border="1" alt="" name="pan0"></td>

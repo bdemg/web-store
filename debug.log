@@ -1,0 +1,4 @@
+[0419/164004.254:ERROR:crash_report_database_win.cc(563)] CreateDirectory C:\Program Files (x86)\temp: Acceso denegado. (0x5)
+[0419/164005.642:ERROR:crash_report_database_win.cc(563)] CreateDirectory C:\Program Files (x86)\temp: Acceso denegado. (0x5)
+[0419/164005.642:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Ha terminado la canalización. (0x6D)
+[0419/164015.829:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
