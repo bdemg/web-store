@@ -202,7 +202,7 @@ if ($_SESSION["valido"] != true) {
 		</form>
 	
 	<p>&iquest;Tienes preguntas, sugerencias o comentarios? Escr&iacute;benos un <a href="mailto:algo@gmail.com;mdoming@uady.mx">correo</a></p>
-	
+	<b><a href="modificarCuenta.php">Modificar datos de la Cuenta</a></b>
 	</body>
 
 </html>
