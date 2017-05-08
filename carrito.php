@@ -60,9 +60,24 @@ function displayShoppingTrolley(){
 				
 				//displayShoppingTrolley(read_cookie("shopping_trolley"));
 				
-				//document.orderform.onsubmit = comprarCarrito;
-				document.orderform.eliminar_todo.onclick = vaciarCarrito;
-				document.orderform.eliminar_seleccionados.onclick = remove;
+				document.orderform.onsubmit = function(){
+					
+					return confirm("¿Estás seguro que deseas comprar todos los productos del carrito?");
+				};
+				
+				document.orderform.eliminar_todo.onclick = function(){
+					
+					if(confirm("¿Estás seguro que deseas eliminar todos los productos del carrito?")){
+						vaciarCarrito();
+					}
+				}
+				
+				document.orderform.eliminar_seleccionados.onclick = function(){
+					
+					if(confirm("¿Estás seguro que deseas eliminar los productos seleccionados del carrito?")){
+						remove();
+					}
+				}
 			}
 			
 			//-->
