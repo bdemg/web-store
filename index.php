@@ -19,6 +19,9 @@ if($cadena!=null){
 		case 5:
 			$cadena = "Sesi&oacute;n cerrada con &eacute;xito.";
 			break;
+		case 6:
+			$cadena = "Se necestan permisos de administrador para acceder a esa p&aacute;gina.";
+			break;
 		default:
 			$cadena = "";
 	}
