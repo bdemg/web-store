@@ -16,12 +16,13 @@ function displayProducts(){
 	include("variables.php");
 	include("funciones.php");
 	
-	$sentenciaSQL = "SELECT name, product_id FROM productos";
+	$sentenciaSQL = "SELECT * FROM productos";
 	$product_info = ConsultarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
 	
 	foreach($product_info as $product){
 		
-		echo "<p><b>".$product["name"]."</b> <input type=\"checkbox\" name=\"eliminations[]\" value=\"".$product["product_id"]."\"></p>";
+		$url = "productDetails.php?name=".urlencode($product["name"])."&image=".urlencode($product["image"])."&descripcion=".urlencode($product["descripcion"])."&price=".urlencode($product["price"]);
+		echo "<p><a target=\"_blank\"href=\"".$url."\"><b>".$product["name"]."</b></a> <input type=\"checkbox\" name=\"eliminations[]\" value=\"".$product["product_id"]."\"></p>\n";
 	}
 }
 ?>
