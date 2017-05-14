@@ -206,6 +206,7 @@ if ($_SESSION["valido"] != true) {
 	
 	<?php if($_SESSION["privilegiosAdmin"] == true) {
 		echo "<a href=\"administrateProducts.php\">Eliminar productos</a>";
+		echo "<a href=\"anadirProducto.php\">A&ntilde;adir productos</a>";
 	} ?>
 	</body>
 
