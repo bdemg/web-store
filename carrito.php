@@ -8,15 +8,15 @@ if ($_SESSION[$is_logged] != true) {
 }
 
 function displayShoppingTrolley(){
-	if((!isset($_COOKIE["shopping_trolley"])) ||
-		(urldecode($_COOKIE["shopping_trolley"]) == "[]")) {
+	if((!isset($_COOKIE["B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley"])) ||
+		(urldecode($_COOKIE["B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley"]) == "[]")) {
 		
 		echo "<h4>No hay elementos en el carrito. Agrega algunos utilizando <a href=\"catalogo.php\">el cat&aacute;logo</h4>";
 	} else {
 		include("funciones.php");
 		include("variables.php");
 		
-		$orderList = json_decode(urldecode($_COOKIE["shopping_trolley"]));
+		$orderList = json_decode(urldecode($_COOKIE["B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley"]));
 		
 		$totalCompra = 0;
 		
@@ -59,7 +59,7 @@ function displayShoppingTrolley(){
 			<!--
 			window.onload = function () {
 				
-				//displayShoppingTrolley(read_cookie("shopping_trolley"));
+				//displayShoppingTrolley(read_cookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley"));
 				
 				document.orderform.onsubmit = function(){
 					

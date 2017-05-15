@@ -49,7 +49,7 @@ function displayProducts(){
 <h1>Productos</h1>
 <form name="forma" action="eliminateProducts.php" method="get">
 <?php displayProducts(); ?>
-<input type="submit" name="aceptar" value="Eliminar"> <input type="button" name="cancelar" value="Cancelar">
+<input type="submit" name="aceptar" value="Eliminar"> <input type="button" name="cancelar" value="Regresar">
 </form>
 </body>
 </html>

@@ -1,9 +1,9 @@
 function placeOrder(productId, quantity){
 	
 	//if the cookie exists
-	if (document.cookie && document.cookie != "" && read_cookie("shopping_trolley")){
+	if (document.cookie && document.cookie != "" && read_cookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley")){
 	
-		var shopping_trolley = read_cookie("shopping_trolley");
+		var shopping_trolley = read_cookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley");
 		
 		if(JSON.stringify(shopping_trolley).includes("{\"id\":" + productId)){
 			
@@ -17,7 +17,7 @@ function placeOrder(productId, quantity){
 		createTrolley(productId, quantity);
 	}
 	
-	alert(JSON.stringify(read_cookie("shopping_trolley")));
+	alert(JSON.stringify(read_cookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley")));
 }
 
 function createTrolley(productId, quantity){
@@ -27,7 +27,7 @@ function createTrolley(productId, quantity){
 	var boughtItem = { "id" : productId, "quantity" : quantity};
 	shopping_trolley.push(boughtItem);
 		
-	bake_cookie("shopping_trolley", shopping_trolley);
+	bake_cookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley", shopping_trolley);
 }
 		
 function increaseItemQuantity(shopping_trolley, addedQuantity, productId){
@@ -41,18 +41,18 @@ function increaseItemQuantity(shopping_trolley, addedQuantity, productId){
 		}
 	}
 			
-	bake_cookie("shopping_trolley", shopping_trolley);
+	bake_cookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley", shopping_trolley);
 }
 
 function addNewItem(shopping_trolley, quantity, productId){
 	
 	shopping_trolley.push( { "id" : productId, "quantity" : quantity } );
-	bake_cookie("shopping_trolley", shopping_trolley);
+	bake_cookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley", shopping_trolley);
 }
 
 function updateTrolleyItemCount(){
 	
-	var itemCount = read_cookie("shopping_trolley").length;
+	var itemCount = read_cookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley").length;
 	
 	if(itemCount){
 		
