@@ -2,7 +2,7 @@
 // * * * * 
 session_start();
 include("sessionVariables.php");
-if ($_SESSION[$admin] != true) {
+if ($_SESSION[$is_logged] != true) {
 	 header("location: index.php?estado=4");
 	 exit();
 }	
