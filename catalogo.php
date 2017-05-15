@@ -202,11 +202,11 @@ if ($_SESSION[$is_logged] != true) {
 		
 		</form>
 	
-	<p>&iquest;Tienes preguntas, sugerencias o comentarios? Escr&iacute;benos un <a href="mailto:algo@gmail.com;mdoming@uady.mx">correo</a></p>
+	<p>&iquest;Tienes preguntas, sugerencias o comentarios? Escr&iacute;benos un <a href="mailto:jacano.sosa@gmail.com;mdoming@uady.mx">correo</a></p>
 	<b><a href="modificarCuenta.php">Modificar datos de la Cuenta</a></b>
 	
 	<?php if($_SESSION[$admin] == true) {
-		echo "<a href=\"administrateProducts.php\">Eliminar productos</a>";
+		echo "<a href=\"administrateProducts.php\">Eliminar productos</a> ";
 		echo "<a href=\"anadirProducto.php\">A&ntilde;adir productos</a>";
 	} ?>
 	</body>
