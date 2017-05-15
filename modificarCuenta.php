@@ -1,7 +1,8 @@
 <?php
 // * * * * 
 session_start();
-if ($_SESSION["valido"] != true) {
+include("sessionVariables.php");
+if ($_SESSION[$is_logged] != true) {
 	 header("location: index.php?estado=4");
 	 exit();
 }	
@@ -10,7 +11,7 @@ if ($_SESSION["valido"] != true) {
 include("variables.php");
 include("funciones.php");
 
-$sentenciaSQL = "SELECT usuario, contrasena, email FROM usuarios WHERE id_usuario =" . $_SESSION["id"];
+$sentenciaSQL = "SELECT usuario, contrasena, email FROM usuarios WHERE id_usuario =" . $_SESSION[$user_id];
 $registros = ConsultarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
 
 if($registros) {

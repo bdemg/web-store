@@ -1,7 +1,8 @@
 <?php
 // * * * * 
 session_start();
-if ($_SESSION["valido"] != true) {
+include("sessionVariables.php");
+if ($_SESSION[$is_logged] != true) {
 	 header("location: index.php?estado=4");
 	 exit();
 }	
@@ -17,7 +18,7 @@ if(!isset($_COOKIE["shopping_trolley"])) {
 	
 	foreach($orderList as $item){
 		
-		$sentenciaSQL = "INSERT INTO ordenes (product_id, id_usuario, quantity) VALUES (" . $item->id . ", " . $_SESSION["id"] . ", '" . $item->quantity . "')";
+		$sentenciaSQL = "INSERT INTO ordenes (product_id, id_usuario, quantity) VALUES (" . $item->id . ", " . $_SESSION[$user_id] . ", '" . $item->quantity . "')";
 		EjecutarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
 	}
 	

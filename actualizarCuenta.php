@@ -1,7 +1,8 @@
 <?php
 // * * * * 
 session_start();
-if ($_SESSION["valido"] != true) {
+include("sessionVariables.php");
+if ($_SESSION[$admin] != true) {
 	 header("location: index.php?estado=4");
 	 exit();
 }	
@@ -50,7 +51,7 @@ $contrasenaF = strip_tags($contrasenaF);
 $emailF = strip_tags($emailF);
 
  
-$sentenciaSQL = "UPDATE usuarios SET contrasena='". $contrasenaF ."', email='". $emailF ."' WHERE id_usuario=". $_SESSION["id"];
+$sentenciaSQL = "UPDATE usuarios SET contrasena='". $contrasenaF ."', email='". $emailF ."' WHERE id_usuario=". $_SESSION[$user_id];
 
 //Guardar el nombre de usuario, contraseña y nombre en la tabla de usuarios
 EjecutarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);

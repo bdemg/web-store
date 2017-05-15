@@ -1,11 +1,12 @@
 <?php
 // * * * * 
 session_start();
-if ($_SESSION["valido"] != true) {
+include("sessionVariables.php");
+if ($_SESSION[$is_logged] != true) {
 	 header("location: index.php?estado=4");
 	 exit();
 }
-if ($_SESSION["privilegiosAdmin"] != true){
+if ($_SESSION[$admin] != true){
 	header("location: index.php?estado=6");
 	exit();
 }

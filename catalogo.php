@@ -1,7 +1,8 @@
 <?php
 // * * * * 
 session_start();
-if ($_SESSION["valido"] != true) {
+include("sessionVariables.php");
+if ($_SESSION[$is_logged] != true) {
 	 header("location: index.php?estado=4");
 	 exit();
 }	
@@ -204,7 +205,7 @@ if ($_SESSION["valido"] != true) {
 	<p>&iquest;Tienes preguntas, sugerencias o comentarios? Escr&iacute;benos un <a href="mailto:algo@gmail.com;mdoming@uady.mx">correo</a></p>
 	<b><a href="modificarCuenta.php">Modificar datos de la Cuenta</a></b>
 	
-	<?php if($_SESSION["privilegiosAdmin"] == true) {
+	<?php if($_SESSION[$admin] == true) {
 		echo "<a href=\"administrateProducts.php\">Eliminar productos</a>";
 		echo "<a href=\"anadirProducto.php\">A&ntilde;adir productos</a>";
 	} ?>

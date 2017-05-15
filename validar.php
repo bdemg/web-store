@@ -30,9 +30,10 @@ if (mysqli_num_rows($resultado) > 0) {
 	for ($registros = array (); $fila = mysqli_fetch_assoc($resultado); $registros[] = $fila);	
 	
 	session_start();
-	$_SESSION["valido"] = true;	
-	$_SESSION["id"] = $registros[0]["id_usuario"];
-	$_SESSION["privilegiosAdmin"] = $registros[0]["admin"];
+	include("sessionVariables.php");
+	$_SESSION[$is_logged] = true;	
+	$_SESSION[$user_id] = $registros[0]["id_usuario"];
+	$_SESSION[$admin] = $registros[0]["admin"];
 	
 	header("location: catalogo.php");
 	
