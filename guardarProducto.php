@@ -50,20 +50,19 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {
         header("location: registroProducto.php");
 		exit();
     }
 }
 
+include("variables.php");
+include("funciones.php");
 $conexion = mysqli_connect($servidor, $usuario, $contrasena, $basedatos);
 if (!$conexion) {
     die("Fallo: " . mysqli_connect_error());
 }
-
-include("variables.php");
-include("funciones.php");
 
 //Evitar inyección SQL - sustituir caraceres para que no se interprete
 $nombreProductoF = mysqli_real_escape_string($conexion, $_REQUEST["nombreProducto"]);
@@ -84,5 +83,15 @@ $descripcionF = strip_tags($descripcionF);
 $sentenciaSQL = "INSERT INTO productos (image, name, price, descripcion) VALUES ('" . $target_file . "', '" . $nombreProductoF . "', " . $precioF . ", '" . $descripcionF . "')";
 EjecutarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
 
-header("location: catalogo.php");
+//header("location: catalogo.php");
+echo "<html>
+<head>
+	<title>Registrar nuevo producto</title>
+	<script>
+		alert(\"Nuevo producto registrado.\");
+		window.location.href = \"catalogo.php\";
+	</script>
+</head>
+</html>";
+
 ?>

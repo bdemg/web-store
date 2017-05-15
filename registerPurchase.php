@@ -8,13 +8,13 @@ if ($_SESSION[$is_logged] != true) {
 }	
 // * * * * 
 
-if(!isset($_COOKIE["shopping_trolley"])) {
+if(!isset($_COOKIE["B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley"])) {
     header("location: carrito.php");
 } else {
     include("funciones.php");
 	include("variables.php");
 	
-	$orderList = json_decode(urldecode($_COOKIE["shopping_trolley"]));
+	$orderList = json_decode(urldecode($_COOKIE["B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley"]));
 	
 	foreach($orderList as $item){
 		
@@ -22,8 +22,18 @@ if(!isset($_COOKIE["shopping_trolley"])) {
 		EjecutarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
 	}
 	
-	unset($_COOKIE["shopping_trolley"]);
-	setcookie("shopping_trolley", null, -1, '/');
-	header("location: catalogo.php");
+	unset($_COOKIE["B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley"]);
+	setcookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley", null, -1, '/');
+	//header("location: catalogo.php");
+	
+	echo "<html>
+	<head>
+		<title>Registrar Orden</title>
+		<script>
+			alert(\"Orden registrada.\");
+			window.location.href = \"catalogo.php\";
+		</script>
+	</head>
+	</html>";
 }
 ?>
