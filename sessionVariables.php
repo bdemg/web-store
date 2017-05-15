@@ -1,7 +1,7 @@
 <?php
 
-$is_logged = "valido";
-$user_id = "id";
-$admin = "privilegiosAdmin";
+$is_logged = "B41B3C530B5F10A834F8957A96E0052F9FCD09AAvalido";
+$user_id = "B41B3C530B5F10A834F8957A96E0052F9FCD09AAid";
+$admin = "B41B3C530B5F10A834F8957A96E0052F9FCD09AAprivilegiosAdmin";
 
 ?>
