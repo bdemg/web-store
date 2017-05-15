@@ -56,6 +56,14 @@ $sentenciaSQL = "UPDATE usuarios SET contrasena='". $contrasenaF ."', email='". 
 //Guardar el nombre de usuario, contraseña y nombre en la tabla de usuarios
 EjecutarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
 
-header("location: catalogo.php");
-
+//header("location: catalogo.php");
+echo "<html>
+<head>
+	<title>Modificar cuenta</title>
+	<script>
+		alert(\"Datos de la cuenta actualizados con exito.\");
+		window.location.href = \"catalogo.php\";
+	</script>
+</head>
+</html>";
 ?>
