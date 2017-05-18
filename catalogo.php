@@ -22,21 +22,23 @@ function searchProduct(){
 	
 	global $product_info;
 	
-	echo "<table align='center' border='1px'>";
+	echo "<div class=\"a-box-large\">";
 	for($i = 0; $i < count($product_info); $i++){
 		
-		echo "<tr><td rowspan='4'><img src='".$product_info[$i]["image"]."' width='150' height='150' border='1'></td>";
-		echo "<td>".$product_info[$i]["name"]."</td></tr>";
+		echo "<img src='".$product_info[$i]["image"]."'>";
+                echo "<ul class=\"list-of-description a-box-small\">";
+		echo "<li><label>".$product_info[$i]["name"]."</label></li>";
 		
-		echo "<tr><td>".$product_info[$i]["descripcion"]."</td></tr>";
+		echo "<li><label>".$product_info[$i]["descripcion"]."</label></li>";
 		
-		echo "<tr><td>Precio: $".$product_info[$i]["price"]."</td></tr>";
+		echo "<li><label>Precio: $".$product_info[$i]["price"]."</label></li>";
 		
-		echo "<tr><td>Cantidad:</td><td><input type='text' name='cantidad' size='10'></td>";
-		echo "<td><input type='button' class='btn' name='btn_anadir' value='A&ntilde;adir'></td>";
-		echo "<td><input type='hidden' name='id_pan' value='".$product_info[$i]["product_id"]."'></td></tr>";
+		echo "<li><label>Cantidad:</label><input type='text' name='cantidad' size='10'></li>";
+		echo "<li><input type='button' class='btn' name='btn_anadir' value='A&ntilde;adir'></li>";
+		echo "<li><input type='hidden' name='id_pan' value='".$product_info[$i]["product_id"]."'></li>";
+                echo "</ul>";
 	}
-	echo "</table>";
+	echo "</div>";
 }
 
 function generateValidations(){
