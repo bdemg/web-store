@@ -109,7 +109,7 @@ function generateValidations(){
 		<form name="forma" method="get" action="catalogo.php">
 			
 			<input type="button" class="btn" name="btn_carrito" value="Carrito (0)"> <br/>
-			<a href="cerrarSesion.php">Cerrar sesi&oacute;n</a> <br/>
+			<a class="btn" href="cerrarSesion.php">Cerrar sesi&oacute;n</a> <br/>
 			
 			<input type="text" name="txtf_search" size="20">
 			<input type="submit" name="btn_search" value="Buscar">
