@@ -22,28 +22,33 @@ function displayShoppingTrolley(){
 		
 		echo "<div class=\"a-box-large\">";
 		foreach($orderList as $item){
-			echo "<tr>";
+			echo "";
 			
 			$sentenciaSQL = "SELECT image, name, price FROM productos WHERE product_id=" . $item->id;
 			$product_info = ConsultarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
 			
-			echo "<img src=" . $product_info[0]["image"] . "'>";
-			echo "<b>" . $product_info[0]["name"] . "</b>";
-			echo "<i>cantidad: " . $item->quantity . " pieza(s)</i>";
-			echo "<i>subtotal: $" . $product_info[0]["price"] * $item->quantity . "</i>";
-			echo "<input type=\"checkbox\" name=\"orderboxes\" value=" . json_encode($item) . ">";
+			echo "<img src=" . $product_info[0]["image"] . ">";
+                        echo "<ul class=\"list-of-description a-box-small\">";
+			echo "<li><label><b>" . $product_info[0]["name"] . "</b></label></li>";
+			echo "<li><i>cantidad: " . $item->quantity . " pieza(s)</i></li>";
+			echo "<li><i>subtotal: $" . $product_info[0]["price"] * $item->quantity . "</i></li>";
+			echo "<li><input type=\"checkbox\" name=\"orderboxes\" value=" . json_encode($item) . "></li>";
 			
 			$totalCompra = $totalCompra + ($product_info[0]["price"] * $item->quantity);
 			
-			echo "</tr>";
+			echo "</ul>";
 		}
 		echo "</div>";
 		
 		$totalCompra = $totalCompra + 20;
 		
+                echo "<div class=\" a-box-large\" ";
 		echo "<span id=\"shopping_totals\"><p>Precio de Env&iacute;o: $20</p> <p>Total - $". $totalCompra ."</span>";
-		echo "<span id=\"buttons\"> <input type=\"submit\" class=\"btn\" name=\"comprar\" value=\"Comprar\"> <input type=\"button\" class=\"btn\" name=\"eliminar_seleccionados\" value=\"Eliminar Seleccionados\"> <input class=\"btn\" type=\"button\" name=\"eliminar_todo\" value=\"Vaciar Carrito\"> </span>";
-	}
+		echo "<span class=\"list-of-buttons\" id=\"buttons\"> "
+                        . "<input type=\"submit\" class=\"btn\" name=\"comprar\" value=\"Comprar\"> "
+                        . "<input type=\"button\" class=\"btn\" name=\"eliminar_seleccionados\" value=\"Eliminar Seleccionados\"> "
+                        . "<input class=\"btn\" type=\"button\" name=\"eliminar_todo\" value=\"Vaciar Carrito\"> </span>";
+	}       echo "</div>";
 }	
 // * * * * 
 ?>
@@ -86,14 +91,16 @@ function displayShoppingTrolley(){
 	</head>
 	
 	<body>
+            <div class="catalog-header">
 		<h1>Carrito</h1>
-
+            </div>    
+            
 		<form name="orderform" action="registerPurchase.php" method="get">
 			<?php displayShoppingTrolley()
 			?>
 		</form>
 		<br>
-	<a href="catalogo.php"> Regresar al Cat&aacute;logo </a>
+	<a class="btn" href="catalogo.php"> Regresar al Cat&aacute;logo </a>
 	</body>
 
 </html>
