@@ -103,18 +103,24 @@ function generateValidations(){
 	</head>
 	
 	<body>
-	
-		<h1>Cat&aacute;logo</h1>
+            
 		
 		<form name="forma" method="get" action="catalogo.php">
 			
-			<input type="button" class="btn" name="btn_carrito" value="Carrito (0)">
-                        <button class="btn"><a class="a-btn-link" href="cerrarSesion.php">Cerrar sesi&oacute;n</a></button>
-			
-			<input type="text" name="txtf_search" size="20">
-			<input type="submit" name="btn_search" value="Buscar">
-			<input type="button" name="btn_viewAll" value="Ver todo">
-			
+                    <ul class="list-of-buttons">
+                        <li>
+                            <h1>Cat&aacute;logo</h1>
+                        </li>
+                        <li>
+                            <input type="button" class="btn" name="btn_carrito" value="Carrito (0)">
+                            <a class="btn btn-primary" href="cerrarSesion.php">Cerrar sesi&oacute;n</a>
+                        </li>
+                        <li>
+                            <input type="text" name="txtf_search" size="20">
+                            <input class="btn" type="submit" name="btn_search" value="Buscar">
+                            <input class="btn" type="button" name="btn_viewAll" value="Ver todo">
+                        </li>
+                    </ul>
 			<?php
 				if( isset($_REQUEST["txtf_search"]) ){
 					
@@ -124,12 +130,17 @@ function generateValidations(){
 			
 		</form>
 		
-		<p>&iquest;Tienes preguntas, sugerencias o comentarios? Escr&iacute;benos un <a href="mailto:jacano.sosa@gmail.com;mdoming@uady.mx">correo</a></p>
-                <b><button class="btn"><a href="modificarCuenta.php">Modificar datos de la Cuenta</a></button></b>
+                <div class="a-box-medium">
+                    <p class="an-info-box info-box">&iquest;Tienes preguntas, sugerencias o comentarios? </br> 
+                    Escr&iacute;benos <a href="mailto:jacano.sosa@gmail.com;mdoming@uady.mx">a nuestro correo</a></p>
+                    <b><a class="btn" href="modificarCuenta.php">Modificar datos de la Cuenta</a></b>
+                </div>
 	
 		<?php if($_SESSION[$admin] == true) {
-			echo "<button class=\"btn\"><a class=\"a-btn-link\" href=\"administrateProducts.php\">Eliminar productos</a></button>";
-			echo "<button class=\"btn\"><a class=\"a-btn-link\" href=\"anadirProducto.php\">A&ntilde;adir productos</a></button>";
+                        echo "<div class=\"a-box-large end-of-page\">";
+			echo "<a class=\"btn\" href=\"administrateProducts.php\">Eliminar productos</a>";
+			echo "<a class=\"btn\" href=\"anadirProducto.php\">A&ntilde;adir productos</a>";
+                        echo "</div>";
 		} ?>
 	</body>
 

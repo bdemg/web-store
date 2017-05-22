@@ -94,9 +94,28 @@ button, input {
     box-shadow: 0px 1px 1px 0px #d2c8af;
 }
 
+a.btn {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    background-color: #eff1f2;
+    text-decoration: none;
+    color: initial;
+    padding: 9px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid #d1d5da;
+    box-shadow: 0px 1px 1px 0px #d2c8af;
+}
+
+a.btn + a.btn {
+    margin-left: 13px;
+}
+
 .btn-primary {
     color: #2d2d2d;
-    background-color: #edd289;
+    background-color: #edd289; !important
 }
 
 .an-info-box{
@@ -233,6 +252,14 @@ button, input {
     box-shadow: 0 1px 3px bisque;
 }
 
+p.info-box {
+    width: 400px;
+    background-color: #fafbfc;
+    border: 1px solid #ccc3bb;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px bisque;
+}
+
 .info-box h2 {
     margin-bottom: 15px;
     padding: 15px;
@@ -289,4 +316,8 @@ li .btn + .btn {
     margin: 4px 0px 2px;
     font-size: 12px;
     color: grey;
+}
+
+.end-of-page {
+    margin-bottom: 20px;
 }

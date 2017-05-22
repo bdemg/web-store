@@ -46,11 +46,19 @@ function displayProducts(){
 </head>
 
 <body>
-    <h1>Productos</h1>
+    <ul class="list-of-buttons" style="margin-top:14px;">
+        <li>
+            <h1>Productos</h1>
+        </li>
+    </ul>
         <form name="forma" action="eliminateProducts.php" method="get">
+            <div class="a-box-large">
             <?php displayProducts(); ?>
-        <input type="submit" name="aceptar" value="Eliminar">
+            </div>
+            <div class="a-box-medium">
+        <input type="submit" class="btn" name="aceptar" value="Eliminar">
         <input type="button" class="btn" name="cancelar" value="Regresar">
+            </div>
     </form>
 </body>
 </html>

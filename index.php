@@ -80,7 +80,7 @@ function getIfSet(&$value, $default = null){
             </div>
 			
 			<?php 
-			echo "<p>" . $cadena . "</p>";
+			echo "<p class=\"registration-link-box mt-medium\"><b>" . $cadena . "</b></p>";
 			?>
             
 	</body>
