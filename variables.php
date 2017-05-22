@@ -3,6 +3,6 @@
 $servidor = "localhost";
 $usuario = "root";
 $contrasena = "";
-$basedatos = "tienda";
+$basedatos = "equipo3_tienda";
 
 ?>

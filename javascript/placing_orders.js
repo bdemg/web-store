@@ -17,7 +17,7 @@ function placeOrder(productId, quantity){
 		createTrolley(productId, quantity);
 	}
 	
-	//alert(JSON.stringify(read_cookie("B41B3C530B5F10A834F8957A96E0052F9FCD09AAshopping_trolley")));
+	alert("Producto añadido al carrito");
 }
 
 function createTrolley(productId, quantity){
