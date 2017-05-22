@@ -1,6 +1,9 @@
 
 function bake_cookie(name, value) {
-	var cookie = [name, '=', encodeURIComponent(JSON.stringify(value)), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
+	var date = new Date();
+	date.setFullYear(date.getFullYear()+1);
+	var expires = "; expires=" + date.toGMTString();
+	var cookie = [name, '=', encodeURIComponent(JSON.stringify(value)), expires,  '; domain=.', window.location.host.toString(), '; path=/~equipo3/web-store;', ''].join('');
 	document.cookie = cookie;
 }
 

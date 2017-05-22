@@ -25,9 +25,9 @@ if(isset($_REQUEST["price"])){
 	$precioF = htmlentities($precioF, ENT_QUOTES);
 	$precioF = strip_tags($precioF);
 	
-	$sentenciaSQL = "UPDATE productos SET price=".$precioF." WHERE name=\"".$_REQUEST["name"]."\"";
+	$sentenciaSQL = "UPDATE productos SET price=".$precioF." WHERE name=\"".htmlentities($_REQUEST["name"], ENT_QUOTES)."\"";
 	EjecutarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
-
+	
 	echo "<html>
 <head>
 	<title>Actualizar Precio</title>

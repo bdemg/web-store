@@ -13,22 +13,22 @@ if ($_SESSION[$admin] != true){
 // * * * *
 
 if (empty($_REQUEST["nombreProducto"])) {
-	header("location: registroProducto.php");
+	header("location: anadirProducto.php?eror=noname");
 	exit();
 }
 
 if (empty($_REQUEST["precio"])) {
-	header("location: registroProducto.php");
+	header("location: anadirProducto.php?eror=noprice");
 	exit();
 }
 
 if (empty($_REQUEST["descripcion"])) {
-	header("location: registroProducto.php");
+	header("location: anadirProducto.php?eror=nodes");
 	exit();
 }
 
 if (empty($_FILES["fileToUpload"])) {
-	header("location: registroProducto.php");
+	header("location: anadirProducto.php?eror=nofile");
 	exit();
 }
 
@@ -46,13 +46,13 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    header("location: registroProducto.php?estado=4");
+    header("location: anadirProducto.php?estado=4");
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {
-        header("location: registroProducto.php");
+        header("location: anadirProducto.php?error=writeerror");
 		exit();
     }
 }
