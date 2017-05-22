@@ -93,13 +93,22 @@ if ($_SESSION[$admin] != true){
 	</script>
 </head>
 <body>
-<h1>Registrar Nuevo Producto</h1>
-<form name="forma" action="guardarProducto.php" method="post" enctype="multipart/form-data">
-	<p>Nombre del producto: <input type="text" name="nombreProducto" size="50"/></p>
-	<p>Descripci&oacute;n del producto: <textarea rows="5" cols="50" name="descripcion"></textarea></p>
-	<p>Precio:<input type="text" name="precio" size="50"/></p>
-	<p>Imagen:<input type="file" name="fileToUpload"></p>
-	<input type="submit" name="aceptar" value="Aceptar"> <input type="button" name="cancelar" value="Cancelar">
-</form>
+    <div class="form-header">
+        <h1>Registrar Nuevo Producto</h1>
+    </div>
+        <form name="forma" action="guardarProducto.php" method="post" enctype="multipart/form-data">
+            <div class="form-body">
+                <label>Nombre del producto:</label>
+                    <input type="text" name="nombreProducto" size="50"/>
+                <label>Descripci&oacute;n del producto: </label>
+                    <textarea rows="5" cols="50" name="descripcion"></textarea>
+                <label>Precio:</label>
+                    <input type="text" name="precio" size="50"/>
+                <label>Imagen:</label>
+                    <input type="file" name="fileToUpload">
+                <input type="submit" class="btn" name="aceptar" value="Aceptar">
+                <input type="button" class="btn" name="cancelar" value="Cancelar">
+            </div>
+        </form>
 </body>
 </html>

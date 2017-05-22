@@ -20,29 +20,29 @@ function displayShoppingTrolley(){
 		
 		$totalCompra = 0;
 		
-		echo "<table id=\"shopping_trolley\"> <tbody>";
+		echo "<div class=\"a-box-large\">";
 		foreach($orderList as $item){
 			echo "<tr>";
 			
 			$sentenciaSQL = "SELECT image, name, price FROM productos WHERE product_id=" . $item->id;
 			$product_info = ConsultarSQL ($servidor, $usuario, $contrasena, $basedatos, $sentenciaSQL);
 			
-			echo "<td> <img src=" . $product_info[0]["image"] . " width=\"50\" height=\"50\" border=\"1\"> </td>";
-			echo "<td> <b>" . $product_info[0]["name"] . "</b> </td>";
-			echo "<td> <i>cantidad: " . $item->quantity . " pieza(s)</i> </td>";
-			echo "<td> <i>subtotal: $" . $product_info[0]["price"] * $item->quantity . "</i> </td>";
-			echo "<td> <input type=\"checkbox\" name=\"orderboxes\" value=" . json_encode($item) . "> </td>";
+			echo "<img src=" . $product_info[0]["image"] . "'>";
+			echo "<b>" . $product_info[0]["name"] . "</b>";
+			echo "<i>cantidad: " . $item->quantity . " pieza(s)</i>";
+			echo "<i>subtotal: $" . $product_info[0]["price"] * $item->quantity . "</i>";
+			echo "<input type=\"checkbox\" name=\"orderboxes\" value=" . json_encode($item) . ">";
 			
 			$totalCompra = $totalCompra + ($product_info[0]["price"] * $item->quantity);
 			
 			echo "</tr>";
 		}
-		echo "</tbody></table>";
+		echo "</div>";
 		
 		$totalCompra = $totalCompra + 20;
 		
 		echo "<span id=\"shopping_totals\"><p>Precio de Env&iacute;o: $20</p> <p>Total - $". $totalCompra ."</span>";
-		echo "<span id=\"buttons\"><p><input type=\"submit\" name=\"comprar\" value=\"Comprar\"> &nbsp; <input type=\"button\" name=\"eliminar_seleccionados\" value=\"Eliminar Seleccionados\"> &nbsp; <input type=\"button\" name=\"eliminar_todo\" value=\"Vaciar Carrito\"> </p></span>";
+		echo "<span id=\"buttons\"> <input type=\"submit\" class=\"btn\" name=\"comprar\" value=\"Comprar\"> <input type=\"button\" class=\"btn\" name=\"eliminar_seleccionados\" value=\"Eliminar Seleccionados\"> <input class=\"btn\" type=\"button\" name=\"eliminar_todo\" value=\"Vaciar Carrito\"> </span>";
 	}
 }	
 // * * * * 

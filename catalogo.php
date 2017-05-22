@@ -108,8 +108,8 @@ function generateValidations(){
 		
 		<form name="forma" method="get" action="catalogo.php">
 			
-			<input type="button" class="btn" name="btn_carrito" value="Carrito (0)"> <br/>
-			<a class="btn" href="cerrarSesion.php">Cerrar sesi&oacute;n</a> <br/>
+			<input type="button" class="btn" name="btn_carrito" value="Carrito (0)">
+                        <button class="btn"><a class="a-btn-link" href="cerrarSesion.php">Cerrar sesi&oacute;n</a></button>
 			
 			<input type="text" name="txtf_search" size="20">
 			<input type="submit" name="btn_search" value="Buscar">
@@ -125,11 +125,11 @@ function generateValidations(){
 		</form>
 		
 		<p>&iquest;Tienes preguntas, sugerencias o comentarios? Escr&iacute;benos un <a href="mailto:jacano.sosa@gmail.com;mdoming@uady.mx">correo</a></p>
-		<b><a href="modificarCuenta.php">Modificar datos de la Cuenta</a></b>
+                <b><button class="btn"><a href="modificarCuenta.php">Modificar datos de la Cuenta</a></button></b>
 	
 		<?php if($_SESSION[$admin] == true) {
-			echo "<a href=\"administrateProducts.php\">Eliminar productos</a> ";
-			echo "<a href=\"anadirProducto.php\">A&ntilde;adir productos</a>";
+			echo "<button class=\"btn\"><a class=\"a-btn-link\" href=\"administrateProducts.php\">Eliminar productos</a></button>";
+			echo "<button class=\"btn\"><a class=\"a-btn-link\" href=\"anadirProducto.php\">A&ntilde;adir productos</a></button>";
 		} ?>
 	</body>
 
